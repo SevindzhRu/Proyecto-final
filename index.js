@@ -1,27 +1,26 @@
 class Usuario {
     constructor(nombre, apellido, edad, pais, ciudad, esQueenFan) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.pais = pais;
-        this.ciudad = ciudad;
-        this.esQueenFan = esQueenFan;
-        this.saludar = () => `Hola mi nombre es ${this.nombre} ${this.apellido}, mi edad es: ${this.edad}`;
+        this.nombre = nombre
+        this.apellido = apellido
+        this.edad = edad
+        this.pais = pais
+        this.ciudad = ciudad
+        this.esQueenFan = esQueenFan
     }
 }
 
 function crearUsuario() {
-  let nombre = prompt("Ingresa tu nombre");
-  let apellido = prompt("Ingresa tu apellido");
-  let edad = prompt("Ingresa tu edad");
-  let pais = prompt("Ingresa tu pais");
-  let ciudad = prompt("Ingresa tu ciudad");
-  let esQueenFan = prompt("¿Eres fan de Queen? (Si/No)");
+  let nombre = prompt("Ingresa tu nombre")
+  let apellido = prompt("Ingresa tu apellido")
+  let edad = prompt("Ingresa tu edad")
+  let pais = prompt("Ingresa tu pais")
+  let ciudad = prompt("Ingresa tu ciudad")
+  let esQueenFan = prompt("¿Eres fan de Queen? (Si/No)")
 
-  if (esQueenFan.toLowerCase() == "Si") {
-    esQueenFan = true;
+  if (esQueenFan.toLocaleLowerCase () === "si") {
+    esQueenFan = true
   } else {
-    esQueenFan = false;
+    alert ("Te recomiendo escucharlos")
   }
 
   const objetoUsuario = new Usuario(
@@ -32,11 +31,11 @@ function crearUsuario() {
     ciudad,
     esQueenFan
   );
-  return objetoUsuario;
+  return objetoUsuario
 }
 
-const usuarioUno = crearUsuario();
-console.info(usuarioUno);
+const usuarioUno = crearUsuario()
+console.info(usuarioUno)
 
 
 function mostrarMenu() {
@@ -47,7 +46,7 @@ function mostrarMenu() {
   }
 
   mostrarMenu()
-
+  
   const bestSongs = [
     "Bohemian Rhapsody",
     "We Are The Champions",
@@ -91,3 +90,10 @@ elemento,
 }));
 
 console.log(newList)
+
+// function main(){
+//   crearUsuario()
+//   mostrarMenu()
+// }
+
+// main()
