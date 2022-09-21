@@ -1,41 +1,41 @@
-class Usuario {
-    constructor(nombre, apellido, edad, pais, ciudad, esQueenFan) {
-        this.nombre = nombre
-        this.apellido = apellido
-        this.edad = edad
-        this.pais = pais
-        this.ciudad = ciudad
-        this.esQueenFan = esQueenFan
-    }
-}
+// class Usuario {
+//     constructor(nombre, apellido, edad, pais, ciudad, esQueenFan) {
+//         this.nombre = nombre
+//         this.apellido = apellido
+//         this.edad = edad
+//         this.pais = pais
+//         this.ciudad = ciudad
+//         this.esQueenFan = esQueenFan
+//     }
+// }
 
-function crearUsuario() {
-  let nombre = prompt("Ingresa tu nombre")
-  let apellido = prompt("Ingresa tu apellido")
-  let edad = prompt("Ingresa tu edad")
-  let pais = prompt("Ingresa tu pais")
-  let ciudad = prompt("Ingresa tu ciudad")
-  let esQueenFan = prompt("¿Eres fan de Queen? (Si/No)")
+// function crearUsuario() {
+//   let nombre = prompt("Ingresa tu nombre")
+//   let apellido = prompt("Ingresa tu apellido")
+//   let edad = prompt("Ingresa tu edad")
+//   let pais = prompt("Ingresa tu pais")
+//   let ciudad = prompt("Ingresa tu ciudad")
+//   let esQueenFan = prompt("¿Eres fan de Queen? (Si/No)")
 
-  if (esQueenFan.toLocaleLowerCase () === "si") {
-    esQueenFan = true
-  } else {
-    alert ("Te recomiendo escucharlos")
-  }
+//   if (esQueenFan.toLocaleLowerCase () === "si") {
+//     esQueenFan = true
+//   } else {
+//     alert ("Te recomiendo escucharlos")
+//   }
 
-  const objetoUsuario = new Usuario(
-    nombre,
-    apellido,
-    edad,
-    pais,
-    ciudad,
-    esQueenFan
-  );
-  return objetoUsuario
-}
+//   const objetoUsuario = new Usuario(
+//     nombre,
+//     apellido,
+//     edad,
+//     pais,
+//     ciudad,
+//     esQueenFan
+//   );
+//   return objetoUsuario
+// }
 
-const usuarioUno = crearUsuario()
-console.info(usuarioUno)
+// const usuarioUno = crearUsuario()
+// console.info(usuarioUno)
 
 
 // function mostrarMenu() {
@@ -62,69 +62,69 @@ console.info(usuarioUno)
     "Dont Stop Me Now"
 ]
 
-let otherSongs = [
-    "Another One Bites The Dust",
-    "Love Of My Life",
-    "A King Of Magic",
-    "Under Pressure",
-    "Crazy Little Thing Colled Love"
-]
+// let otherSongs = [
+//     "Another One Bites The Dust",
+//     "Love Of My Life",
+//     "A King Of Magic",
+//     "Under Pressure",
+//     "Crazy Little Thing Colled Love"
+// ]
 
-console.log(bestSongs)
+// console.log(bestSongs)
 
-const tuLista = []
+// const tuLista = []
 
-let opcion
+// let opcion
 
-do {
-    opcion = parseInt(prompt("Bienvenido, seleccione una opción \n1.Best Songs\n2.Crea tu propia lista lista\n3.Ver tu selección \n4 Salir del menu"))
+// do {
+//     opcion = parseInt(prompt("Bienvenido, seleccione una opción \n1.Best Songs\n2.Crea tu propia lista lista\n3.Ver tu selección \n4 Salir del menu"))
 
 
-    switch (opcion) {
-        case 1:
+//     switch (opcion) {
+//         case 1:
 
-            function mostrarMenu() {
-                let mensaje = "Best Songs"
-                let count = 1
+//             function mostrarMenu() {
+//                 let mensaje = "Best Songs"
+//                 let count = 1
 
-                for (let song of bestSongs) {
-                    mensaje += `\n${count}. ${song}`
-                    count++
-                }
-                //  mensaje += `\n${count}. Finalizar`
-                return mensaje
-            }
+//                 for (let song of bestSongs) {
+//                     mensaje += `\n${count}. ${song}`
+//                     count++
+//                 }
+//                 //  mensaje += `\n${count}. Finalizar`
+//                 return mensaje
+//             }
 
-            alert(mostrarMenu())
+//             alert(mostrarMenu())
 
-            break
-        case 2:
-            let song = prompt("Escribe el nombre de la canción")
-            tuLista.push(song)
-            console.log(tuLista)
+//             break
+//         case 2:
+//             let song = prompt("Escribe el nombre de la canción")
+//             tuLista.push(song)
+//             console.log(tuLista)
 
-            break
-        case 3:
+//             break
+//         case 3:
 
-            function nuevaLista() {
-                let mensaje = "Tu selección"
-                let count = 1
+//             function nuevaLista() {
+//                 let mensaje = "Tu selección"
+//                 let count = 1
 
-                for (let song of tuLista) {
-                    mensaje += `\n${count}. ${song}`
-                    count++
-                }
-                return mensaje
-            }
-            alert(nuevaLista())
-            break
+//                 for (let song of tuLista) {
+//                     mensaje += `\n${count}. ${song}`
+//                     count++
+//                 }
+//                 return mensaje
+//             }
+//             alert(nuevaLista())
+//             break
 
-        case 4:
-            alert("Gracias por tu visita")
+//         case 4:
+//             alert("Gracias por tu visita")
 
-    }
+//     }
 
-} while (opcion !== 4)
+// } while (opcion !== 4)
 
 
 // for (let index = 0; index < bestSongs.length; index++) {
@@ -155,56 +155,82 @@ do {
 
 // main()
 
-console.log(document)
 
-console.log(document.head)
-console.log(document.body)
+// ============ DOM ======================
 
+// console.log(document)
 
-
-const playList = [
-    {
-        id: 1,
-        name: "We Are The Champions",
-
-    },
-
-    {
-        id: 2,
-        name: "Lonely",
-
-    },
-
-    {
-        id: 3,
-        name: "Bohemian Rhapsody",
-    },
-
-    {
-        id: 4,
-        name: "Show Must Go On",
-    },
-
-    {
-        id: 5,
-        name: "We Will Rock You",
-    },
-
-]
-
-const contenedorCanciones = document.getElementById("contenedor-canciones")
+// console.log(document.head)
+// console.log(document.body)
 
 
-for (const cancion of playList) {
-  let column = document.createElement("div");
-  column.className = "col-md-6 mt-4 ";
-  column.id = `columna-${cancion.id}`;
-  column.innerHTML = `
-      <div class="card">
-          <div class="card-body">
-          <p class="card-text"> Name: <b>${cancion.name}</b></p>
-          </div>
-      </div>`
 
-  contenedorCanciones.append(column);
-}
+// const playList = [
+//     {
+//         id: 1,
+//         name: "We Are The Champions",
+
+//     },
+
+//     {
+//         id: 2,
+//         name: "Lonely",
+
+//     },
+
+//     {
+//         id: 3,
+//         name: "Bohemian Rhapsody",
+//     },
+
+//     {
+//         id: 4,
+//         name: "Show Must Go On",
+//     },
+
+//     {
+//         id: 5,
+//         name: "We Will Rock You",
+//     },
+
+// ]
+
+// const contenedorCanciones = document.getElementById("contenedor-canciones")
+
+
+// for (const cancion of playList) {
+//   let column = document.createElement("div");
+//   column.className = "col-md-6 mt-4 ";
+//   column.id = `columna-${cancion.id}`;
+//   column.innerHTML = `
+//       <div class="card">
+//           <div class="card-body">
+//           <p class="card-text"> Name: <b>${cancion.name}</b></p>
+//           </div>
+//       </div>`
+
+//   contenedorCanciones.append(column);
+// }
+
+// EVENTOS
+
+const mixList = document.querySelector(".mix");
+const button = document.querySelector(".show-list");
+const total = document.querySelector(".total");
+
+button.addEventListener("click", function () {
+  mixInfo(bestSongs);
+  mixList.classList.remove("hide");
+  button.classList.add("hide");
+});
+
+total.innerText = `${bestSongs.length} great songs!`;
+
+const mixInfo = function (mix) {
+  mix.forEach(function (song, index) {
+    let li = document.createElement("li");
+    li.classList.add("song");
+    li.innerHTML = `<span class="song-number">#${index + 1}</span> ${song}`;
+    mixList.append(li);
+  });
+};
