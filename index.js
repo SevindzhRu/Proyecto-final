@@ -139,7 +139,7 @@ function pintarSongs() {
   songs.forEach((song) => {
     let column = document.createElement("div");
     column.className = "col-md-4 mt-3";
-    column.id = `columna-${song.id}`;
+    column.id = `column-${song.id}`;
     column.innerHTML = `
             <div class="card">
                 <div class="card-body">
