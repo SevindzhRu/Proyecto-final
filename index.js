@@ -60,12 +60,15 @@ function inicializarEventos() {
   }
 }
 
+// Operador avanzado
+
 function openModalAddSong() {
-  if (user) {
-    modal.show();
-  } else {
-    alert("Enter for add song");
-  }
+  user?modal.show():alert("Enter for add song")
+  // if (user) {
+  //   modal.show();
+  // } else {
+  //   alert("Enter for add song");
+  // }
 }
 
 function closeModalAddSong() {
@@ -112,7 +115,6 @@ function validarFormulario(event) {
   const idExiste = songs.some((song) => song.id === idSong)
   if (!idExiste) {
     let song = new Song(idSong, name, year, album,)
-
     songs.push(song)
     formulario.reset()
     alert("You have added a song")
