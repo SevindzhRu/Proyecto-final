@@ -1,3 +1,10 @@
+
+Swal.fire(
+  'Welcome!',
+  'You have entered to the best play list',
+  'success'
+)
+
 let songs = []
 let user
 
@@ -117,11 +124,25 @@ function validarFormulario(event) {
     let song = new Song(idSong, name, year, album,)
     songs.push(song)
     formulario.reset()
-    alert("You have added a song")
+     
+Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your have added a song',
+  showConfirmButton: false,
+  timer: 1500
+})
+    // alert("You have added a song")
     actualizarSongsStorage()
     pintarSongs()
   } else {
-    alert("This id already exists")
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'This ID alredy exists!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    })
+    // alert("This id already exists")
   }
 }
 
