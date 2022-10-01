@@ -70,7 +70,12 @@ function inicializarEventos() {
 // Operador avanzado
 
 function openModalAddSong() {
-  user?modal.show():alert("Enter for add song")
+  user?modal.show():Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Enter for add song!'
+  })
+  //alert("Enter for add song")
   // if (user) {
   //   modal.show();
   // } else {
