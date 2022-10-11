@@ -1,7 +1,7 @@
 
 Swal.fire(
   'Welcome!',
-  'You have entered to the best play list',
+  'You have entered to the best player',
   'success'
 )
 
@@ -162,6 +162,8 @@ function deleteSongs(idSong) {
   actualizarSongsStorage();
 }
 
+
+
 function pintarSongs() {
   contenedorCanciones.innerHTML = "";
   songs.forEach((song) => {
@@ -221,9 +223,23 @@ function getUserStorage() {
   }
 }
 
+async function showSongs() {
+  try {
+    const response = await fetch(
+      "https://63442f3bdcae733e8fd98eaa.mockapi.io/api/songs"
+    );
+    const data = await response.json();
+    songs = [...data];
+    pintarSongs();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 function main() {
   inicializarElementos()
   inicializarEventos()
+  showSongs()
   getSongStorage()
   getUserStorage()
 }
