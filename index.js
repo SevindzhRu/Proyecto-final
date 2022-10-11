@@ -226,7 +226,7 @@ function getUserStorage() {
 async function showSongs() {
   try {
     const response = await fetch(
-      "https://63442f3bdcae733e8fd98eaa.mockapi.io/api/songs"
+      "https://63442f3bdcae733e8fd98eaa.mockapi.io/songs"
     );
     const data = await response.json();
     songs = [...data];
