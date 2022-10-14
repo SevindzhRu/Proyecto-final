@@ -2,19 +2,26 @@
     box-sizing: border-box;
   }
   
+  html{
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
    body {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     font-family: "B612", sans-serif;
-    background-color: #532a7f;
     color: black;
     font-size: 16px;
+    background-color: transparent;
   }
-
   p{
-    color: burlywood;
+    color: palevioletred;
     width: 100%;
     padding-top: 1em;
     font-size: 1em;

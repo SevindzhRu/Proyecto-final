@@ -19,16 +19,14 @@ let botonAddSong
 let formulario
 let inputId
 let inputName
-let inputYear
 let inputAlbum
 let contenedorCanciones
 let botonesCloseModalAddSong
 
 class Song {
-  constructor(id, name, year, album) {
+  constructor(id, name, album) {
     this.id = id
     this.name = name.toUpperCase()
-    this.year = year
     this.album = album;
     
   }
@@ -45,7 +43,6 @@ function inicializarElementos() {
   formulario = document.getElementById("formularioAddSong")
   inputId = document.getElementById("inputId")
   inputName = document.getElementById("inputNameSong")
-  inputYear = document.getElementById("inputYear")
   inputAlbum = document.getElementById("inputAlbum")
   contenedorCanciones = document.getElementById("contenedorCanciones")
 
@@ -121,12 +118,11 @@ function validarFormulario(event) {
   event.preventDefault()
   let idSong = inputId.value
   let name = inputName.value
-  let year = parseFloat(inputYear.value)
   let album = inputAlbum.value
 
   const idExiste = songs.some((song) => song.id === idSong)
   if (!idExiste) {
-    let song = new Song(idSong, name, year, album,)
+    let song = new Song(idSong, name, album,)
     songs.push(song)
     formulario.reset()
      
@@ -178,9 +174,6 @@ function pintarSongs() {
                 </p>
                 <p class="card-text">Name:
                     <b>${song.name}</b>
-                </p>
-                <p class="card-text">Year:
-                    <b>${song.year}</b>
                 </p>
                 <p class="card-text">Album:
                     <b>${song.album}</b>
