@@ -178,6 +178,9 @@ function pintarSongs() {
                 <p class="card-text">Album:
                     <b>${song.album}</b>
                 </p>
+                <p class="card-text">watch:
+                <b>${song.watch}</b>
+            </p>
                 </div>
                 <div class="card-footer">
                   <button class="btn btn-danger" id="botonDelete-${song.id}">Delete</button>
