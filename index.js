@@ -166,6 +166,7 @@ function pintarSongs() {
     let column = document.createElement("div");
     column.className = "col-md-4 mt-3";
     column.id = `column-${song.id}`;
+    let videoId = song.watch.split ("=")[1];
     column.innerHTML = `
             <div class="card">
                 <div class="card-body">
@@ -180,6 +181,9 @@ function pintarSongs() {
                 </p>
                 <p class="card-text">watch:
                 <b>${song.watch}</b>
+                <iframe widht="560" height="315" src="https://wwww.youtube.com/embed/${videoId}"
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </p>
                 </div>
                 <div class="card-footer">
