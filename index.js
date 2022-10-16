@@ -67,7 +67,6 @@ function inicializarEventos() {
   }
 }
 
-// Operador avanzado
 
 function openModalAddSong() {
   user?modal.show():Swal.fire({
@@ -75,12 +74,6 @@ function openModalAddSong() {
     title: 'Oops...',
     text: 'Enter for add song!'
   })
-  //alert("Enter for add song")
-  // if (user) {
-  //   modal.show();
-  // } else {
-  //   alert("Enter for add song");
-  // }
 }
 
 function closeModalAddSong() {
@@ -137,7 +130,6 @@ Swal.fire({
   showConfirmButton: false,
   timer: 1500
 })
-    // alert("You have added a song")
     actualizarSongsStorage()
     pintarSongs()
   } else {
@@ -147,7 +139,6 @@ Swal.fire({
       text: 'This ID alredy exists!',
       footer: '<a href="">Why do I have this issue?</a>'
     })
-    // alert("This id already exists")
   }
 }
 
