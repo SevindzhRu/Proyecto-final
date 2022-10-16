@@ -28,8 +28,8 @@ class Song {
   constructor(id, name, watch, album) {
     this.id = id
     this.name = name.toUpperCase()
-    this.album = album;
-    this.watch = watch;
+    this.album = album
+    this.watch = watch
     
   }
 }
