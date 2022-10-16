@@ -20,14 +20,16 @@ let formulario
 let inputId
 let inputName
 let inputAlbum
+let inputWatch
 let contenedorCanciones
 let botonesCloseModalAddSong
 
 class Song {
-  constructor(id, name, album) {
+  constructor(id, name, watch, album) {
     this.id = id
     this.name = name.toUpperCase()
     this.album = album;
+    this.watch = watch;
     
   }
 }
@@ -44,6 +46,7 @@ function inicializarElementos() {
   inputId = document.getElementById("inputId")
   inputName = document.getElementById("inputNameSong")
   inputAlbum = document.getElementById("inputAlbum")
+  inputWatch = document.getElementById ("inputWatch")
   contenedorCanciones = document.getElementById("contenedorCanciones")
 
   botonesCloseModalAddSong = document.getElementsByClassName("btnCloseModalAddSong")
@@ -119,10 +122,11 @@ function validarFormulario(event) {
   let idSong = inputId.value
   let name = inputName.value
   let album = inputAlbum.value
+  let watch = inputWatch.value
 
   const idExiste = songs.some((song) => song.id === idSong)
   if (!idExiste) {
-    let song = new Song(idSong, name, album,)
+    let song = new Song(idSong, name, watch, album,)
     songs.push(song)
     formulario.reset()
      
